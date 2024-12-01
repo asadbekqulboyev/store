@@ -1,0 +1,284 @@
+.header{
+    padding: 20px 0 55px 0;
+    @media #{$laptop}{
+        padding: 20px 0 35px 0;
+    }
+    .left_side{
+        display: flex;
+        align-items: center;
+        gap: 0 66px;
+        @media #{$laptop}{
+            gap: 0 35px;
+        }
+        .menu_wrapper{
+            display: flex;
+            gap: 5px 0;
+            flex-direction: column;
+            position: relative;
+            &:hover{
+                .menu_links{
+                    display: flex;
+                }
+            }
+            .menu_links{
+                display: none;
+                align-items: start;
+                z-index: 1;
+                width: 915px;
+                position: absolute;
+                top: 60px;
+                .secon_child{
+                    padding: 25px 64px 25px 25px;
+                }
+                .item{
+                    border-right: 1px solid #EA5848;
+                    background: #D22E1C;
+                    .menu_links_title{
+                        color: #FFF;
+                        font-family: "SF Pro Display";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 115%; /* 27.6px */
+                        margin-bottom: 20px;
+                    }
+                    &:nth-child(2){
+                        border-radius: 0px 0px 0px 15px;
+                    }
+                    &:nth-child(3){
+                        border-radius: 0px 15px 15px 0px;
+                    }
+                    .item_links{
+                        text-decoration: none;
+                        color: #FFDDD9;
+                        font-family: "SF Pro Display";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 115%; /* 23px */
+                        display: flex;
+                        align-items: center;
+                        gap: 0 15px;
+                        margin-bottom: 10px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .first_child{
+                    padding: 35px 40px 35px 35px;
+                    border-radius: 15px 0px 0px 15px;
+                }
+                
+                
+            }
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            gap: 0 15px;
+            padding: 15px 20px;
+            border-radius: 62px;
+            background: #D22E1C;
+            text-decoration: none;
+            width: fit-content;
+            @media #{$laptop}{
+                gap: 0 10px;
+                padding: 10px 15px;
+            }
+            .text{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: #fff;
+                font-family: Gilroy;
+                @media #{$laptop}{
+                    font-size: 16px;
+                }
+            }
+        }
+        
+          
+    }
+
+    .right_side{
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        input {
+            border-radius: 27px;
+            border: 1px solid #eee;
+            background: #fff;
+            padding: 18.5px 20px;
+            display: flex;
+            width: 741px;
+            outline: none;
+            margin-right: 7px;
+            background-image: url(../images/search.png);
+            background-repeat: no-repeat;
+            background-position: right 20px top 15px;
+        
+            &::placeholder {
+              color: #292929;
+              font-size: 18px;
+              font-family: Gilroy;
+              font-weight: 400;
+            }
+
+            &:focus {
+                border-radius: 27px 27px 0 0;
+            }
+          }
+        .search-wrapper {
+            position: relative;
+            width: fit-content;
+            width: 741px;
+            .search-results {
+              display: none;
+              position: absolute;
+              top: calc(100% + 0px);
+              width: 100%;
+              background: #fff;
+              border: 1px solid #eee;
+              border-radius: 0px 0px 20px 20px;
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+              z-index: 100;
+              border-top: 0px;
+              .result-item {
+                display: flex;
+                align-items: center;
+                padding: 15px 59px 15px 20px;
+                border-bottom: 1px solid #eee;
+          
+                &:last-child {
+                  border-bottom: none;
+                }
+          
+               img{
+                margin-right: 15px;
+               }
+               .prices{
+                display: flex;
+                align-items: center;
+                gap: 0 16px;
+               }
+                .item-name {
+                    color: #292929;
+                    font-family: "SF Pro Display";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 115%; /* 20.7px */
+                    margin-bottom: 10px;
+                }
+          
+                .item-price {
+                    color: #292929;
+                    font-family: Gilroy;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 115%; /* 23px */
+                }
+          
+                .item-old-price {
+                    color: #888;
+                    font-family: Gilroy;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 115%; /* 18.4px */
+                    text-decoration-line: line-through;
+                }
+              }
+          
+              .show-all-results {
+                display: block;
+                text-decoration: none;
+                color: var(--gray, #888);
+                font-family: Gilroy;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 15px 0 15px 20px;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+        }
+          
+        .social{
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            .social_item{
+                border-radius: 120px;
+                width: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 44px;
+                background: #292929;
+                position: relative;
+                @media #{$laptop}{
+                    width: 40px;
+                    height: 40px;
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                span{
+                    top: -15px;
+                    right: -10px;
+                    position: absolute;
+                    color: #FFF;
+                    font-family: Gilroy;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: normal;
+                    border-radius: 46px;
+                    border: 1px solid #FFF;
+                    background: #D22E1C;
+                    padding: 5px;
+                }
+            }
+        }
+        .basket1{
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0 15px;
+            padding: 13px 20px;
+            border-radius: 97px;
+            background: #292929;
+            color: #FFF;
+            font-family: Gilroy;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: normal;
+            @media #{$laptop}{
+                gap: 0 10px;
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+            span{
+                position: absolute;
+                top: -10px;
+                right: 0;
+                border-radius: 46px;
+                border: 1px solid #FFF;
+                background: #D22E1C;
+                width: 43px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

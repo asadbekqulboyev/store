@@ -1,0 +1,109 @@
+.buy {
+  margin-bottom: 50px;
+  
+    .row {
+      display: flex;
+      align-items: stretch;
+      transition: all 0.5s ease;
+      flex-wrap: nowrap;
+    }
+  
+    .left_side {
+      width: calc(20.02% - 10.5px);
+      flex: 0 0 auto;
+      border-radius: 20px;
+      background: #898989;
+      transition: all 0.5s ease;
+      @media #{$laptop}{
+        width: calc(24.07% - 25.5px);
+      }
+      &.hidden {
+        display: none; 
+      }
+      img{
+        width: 100%;
+      }
+    }
+  
+    .right_side {
+      width: calc(80.27% - 10.5px);
+      flex: 0 0 auto;
+      padding: 40px 119px 40px 49px;
+      border-radius: 25px;
+      background: #292929;
+      transition: all 0.5s ease; 
+      position: relative;
+      @media #{$laptop}{
+        width: calc(77.05% - 25.5px);
+        padding: 54px 25px 54px 49px;
+      }
+      &.expanded {
+        width: 100%; 
+      }
+  
+      .title {
+        color: #fff;
+        font-family: "SF Pro Display";
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 105%;
+        @media #{$laptop}{
+          font-size: 32px;
+          margin-bottom: 10px;
+        }
+      }
+  
+      .description {
+        color: #eee;
+        font-family: Gilroy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 10px;
+        @media #{$laptop}{
+          font-size: 16px;
+        }
+  
+        p {
+          margin: 0;
+          transition: opacity 0.5s ease;
+          opacity: 0;
+          display: none;
+  
+          &.visible {
+            opacity: 1;
+            display: block;
+          }
+        }
+  
+        .first.visible {
+          display: block;
+          opacity: 1;
+          span{
+            @media #{$laptop}{
+              display: none;
+            }
+          }
+        }
+      }
+  
+      .show {
+        text-decoration: none;
+        color: #888;
+        font-family: Gilroy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        text-decoration-line: underline;
+        cursor: pointer;
+        @media #{$laptop}{
+          font-size: 16px;
+        }
+      }
+    }
+}
+  

@@ -1,0 +1,99 @@
+.brends{
+    margin-bottom: 100px;
+    .section_title{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .brends_table{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        border: 1px solid #DADADA;
+        border-radius: 20px;
+        overflow: hidden;
+        // .corner1{
+        //     border-radius: 20px 0px 0px 0px;
+        // }
+        // .corner2{
+        //     border-radius: 0px 20px 0px 0px;
+        // }
+        // .corner3{
+        //     border-radius: 0px 0px 0px 20px;
+        // }
+
+        // .corner4{
+        //     border-radius: 0px 0px 20px 0px;
+        // }
+        .type{
+            &:nth-child(n + 18){
+                @media #{$laptop}{
+                    display: none;
+                }
+            }
+        }
+        .brend_item{
+            text-decoration: none;
+            width: 12.5%;
+            flex: 0 0 auto;
+            border: 1px solid #DADADA;
+            background: #FFF;
+            height: 192px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            transition: .3s all ease;
+            @media #{$laptop}{
+                width: 16.666%;
+                height: 164px;
+            }
+            
+            &:hover{
+                background: #D22E1C;
+                .text{
+                    color: #FFF;
+                }
+                span{
+                    border-radius: 21.5px;
+                    border: 1px solid #FFBFB8;
+                    background: #D22E1C;
+                    color: #FFBFB8;
+                }
+            }
+            .text{
+                color: #292929;
+                text-align: center;
+                font-family: "SF Pro Display";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 115%; /* 27.6px */
+                @media #{$laptop}{
+                    font-size: 20px;
+                }
+            }
+            span{
+                top: 5px;
+                left: 5px;
+                color: #888;
+                text-align: center;
+                font-family: Gilroy;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 25.2px */ 
+                border-radius: 21.5px;
+                border: 1px solid #DADADA;
+                background: #FFF;
+                padding: 9px 23px;
+                position: absolute;
+                @media #{$laptop}{
+                    font-size: 16px;
+                    padding: 6px 15px;
+                }
+            }
+        }
+    }
+}

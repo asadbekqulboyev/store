@@ -1,0 +1,45 @@
+//settings
+@import "_media";
+@import "_settings";
+
+//sections
+@import "_header";
+@import "_buy";
+@import "_looking_for";
+@import "_popular_products";
+@import "_brends";
+@import "_questions";
+@import "_footer";
+
+///fonts
+@font-face {
+    font-family: Gilroy; 
+    src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gilroy; 
+    src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gilroy; 
+    src: url('../fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display"; 
+    src: url('../fonts/SFPRODISPLAYREGULAR.OTF');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SF Pro Display"; 
+    src: url('../fonts/SFPRODISPLAYMEDIUM.OTF');
+    font-weight: 400;
+    font-style: normal;
+}

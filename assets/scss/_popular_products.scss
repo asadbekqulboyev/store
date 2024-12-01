@@ -1,0 +1,176 @@
+.popular_products{
+    margin-bottom: 100px;
+    .section_title{
+        margin-bottom: 50px;
+    }
+    .popular_products_swiper{
+        overflow: visible !important;
+    }
+    .item{
+        border-radius: 25px;
+        border: 1px solid #EEE;
+        background: #FFF;
+        padding: 25px 25px 15px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media #{$laptop}{
+            padding: 25px 15px 15px 15px;
+        }
+        .phone{
+            max-width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 0 25px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            @media #{$laptop}{
+                gap: 0 14px;
+            }
+        }
+        .price{
+            color: #292929;
+            font-family: "SF Pro Display";
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 49px */
+            text-align: center;
+            @media #{$laptop}{
+                font-size: 24px;
+            }
+        }
+        .old_price{
+            color: #888;
+            font-family: "SF Pro Display";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 22.4px */
+            text-decoration-line: line-through;
+            text-align: center;
+        }
+        .calculator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4.5px 5px;
+            border:  1px solid #D22E1C;
+            border-radius: 5px;
+            font-size: 24px;
+            width: fit-content;
+            border-radius: 25px;
+            width: 105px;
+            position: relative;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                right: 30px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 30px;
+                width: 1px ;
+                background-color: #D22E1C;
+            }
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 30px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 30px;
+                width: 1px ;
+                background-color: #D22E1C;
+            }
+            .minus, .plus {
+                cursor: pointer;
+            }
+        
+            .result {
+                margin: 0 13px;
+                color: #0C0C0E;
+                font-family: Gilroy;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                
+            }
+        }
+        .basket{
+            display: flex;
+            align-items: center;
+            gap: 0 15px;
+            width: fit-content;
+            padding: 10px 15px;
+            border-radius: 62px;
+            background: #D22E1C;
+            text-decoration: none;
+            .text{
+                color: #FFF;
+                font-family: Gilroy;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+        .text-container{
+            color: #292929;
+            text-align: center;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%; /* 40.25px */
+            @media #{$laptop}{
+                font-size: 24px;
+            }
+        }
+        .text-container {
+            position: relative;
+            width: 300px; /* Matn kengligi */
+            height: 120px;
+            @media #{$laptop}{
+                width: 240px;
+                height: fit-content;
+                padding-bottom: 30px;
+            }
+        }
+          
+        .text {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Maksimal ko'rsatiladigan qatorlar */
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease-in-out;
+            max-height: 4.5em; /* Har bir qator uchun 1.5em balandlik (1.5 * 3 = 4.5) */
+        }
+        
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: var(--gray, #888);
+            font-family: Gilroy;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+        }
+          
+    }
+}

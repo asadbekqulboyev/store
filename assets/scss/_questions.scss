@@ -1,0 +1,123 @@
+.questions{
+    margin-bottom: 100px;
+    .row{
+        align-items: start;
+    }
+    .accordion {
+        width: calc(50% - 15px);
+        flex: 0 0 auto;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        
+        &-item {
+          margin-bottom: 10px;
+          border-radius: 15px;
+          overflow: hidden;
+          
+          &.active {
+            .accordion-header {
+              background: #D22E1C;
+              color: white;
+              border-radius: 10px 10px 0 0;
+              padding: 20px 24px 0 30px;
+              @media #{$laptop}{
+                padding: 18px 20px 18px 20px;
+              }
+              .text {
+                color: #fff;
+              }
+            }
+            
+            .accordion-content {
+              max-height: 500px;
+              padding: 0 84px 20px 10px;
+            }
+            
+            .toggle-icon {
+              &::before,
+              &::after {
+                background: white;
+              }
+              
+              &::before {
+                transform: translateX(-50%) rotate(90deg);
+                opacity: 0;
+              }
+            }
+          }
+        }
+        
+        &-header {
+          background: #EEE;
+          padding: 20px 24px 20px 30px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 10px;
+          transition: all 0.3s ease;
+          
+          .text {
+            color: #292929;
+            font-family: "SF Pro Display";
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%;
+            @media #{$laptop}{
+              font-size: 20px;
+            }
+          }
+          
+          &:hover {
+            background: #f8f8f8;
+          }
+        }
+        
+        &-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+          background: #D22E1C;
+          border-radius: 0 0 20px 20px;
+          color: #FFF;
+          font-family: Gilroy;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          
+          &-inner {
+            padding: 20px;
+          }
+        }
+      }
+      
+      .toggle-icon {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background: #333;
+          transition: all 0.3s ease;
+        }
+        
+        &::before {
+          width: 2px;
+          height: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+        &::after {
+          width: 20px;
+          height: 2px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+    }
+}
