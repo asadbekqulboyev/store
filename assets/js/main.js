@@ -494,5 +494,15 @@ document.querySelector('.menu').addEventListener('click',(e)=>{
 
 })
 });
-
+// jquery
+$(document).ready(function() {
+  $(".parent_link").click(function() {
+    $(this).next(".child_list").slideToggle()
+    $(this).toggleClass('active')
+  });
+  $('.chil_link').click(function(){
+    $(this).next(".chil_link_list").slideToggle()
+    $(this).toggleClass('active')
+  })
+});
   

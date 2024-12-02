@@ -210,6 +210,7 @@ body {
 @media (max-width: 768px) {
   .cookie-banner {
     padding: 15px 10px;
+    bottom: 90px;
   }
 }
 .cookie-banner p {
@@ -2054,6 +2055,12 @@ body {
 }
 .mobile_menu ul .child_list.active {
   display: flex;
+}
+.mobile_menu ul .chil_link img {
+  transition: all 0.3s linear;
+}
+.mobile_menu ul .chil_link.active img {
+  transform: rotate(45deg);
 }
 .mobile_menu ul .chil_link_list {
   display: none;
