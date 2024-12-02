@@ -280,7 +280,6 @@ body {
 
   &#modalCity {
     z-index: 1219823;
-
     .sity_lists {
       display: none;
       position: absolute;
@@ -385,6 +384,8 @@ body {
     .modal-content {
       max-width: 850px;
       height: calc(100vh - 90px);
+    overflow-y: auto;
+
     }
 
     .modal_btn_lists {
@@ -393,7 +394,9 @@ body {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-
+      @media (max-width:800px) {
+        gap: 5px;
+      }
       div {
         position: relative;
       }
@@ -418,7 +421,13 @@ body {
         padding: 10px 20px;
         border-radius: 120px;
         background: #EEE;
-        cursor: pointer;
+          font-family: 'Gilroy';
+          cursor: pointer;
+        @media #{$smTablet} {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+        }
       }
     }
 
@@ -426,11 +435,20 @@ body {
       display: flex;
       gap: 10px;
       justify-content: space-between;
-
+      @media #{$tablet} {
+        flex-wrap: wrap;
+      }
       .modal_link_item {
         height: calc(100vh - 420px);
         overflow-y: auto;
-
+        flex: 0 0 auto;
+        @media (max-width:800px) {
+          width: 45%;
+        }
+        @media #{$smTablet} {
+          width: 100%;
+          height: auto;
+        }
         &::-webkit-scrollbar {
           border-radius: 23px;
           background: #EEE;
@@ -862,17 +880,28 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 105%;
-  /* 42px */
   margin-bottom: 50px;
+  @media #{$tablet} {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
 }
 
 .cartMain {
   display: flex;
   gap: 30px;
+  @media (max-width:1024px) {
+    flex-direction: column;
+  }
 }
 
 .cartLeft {
   flex: 1;
+  .row{
+    @media #{$tablet} {
+      gap: 20px;
+    }
+  }
 }
 
 .orderTitle {
@@ -882,7 +911,9 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 115%;
-  /* 40.25px */
+  @media #{$tablet} {
+    font-size: 18px;
+  }
 }
 
 .clearCartBtn {
@@ -914,7 +945,9 @@ body {
   align-items: center;
   margin-bottom: 15px;
   gap: 0 20px;
-
+  @media #{$smTablet} {
+    flex-direction: column;
+  }
   .itemImage {
     overflow: hidden;
 
@@ -934,8 +967,13 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 115%;
-    /* 27.6px */
     margin-bottom: 30px;
+    @media #{$laptop} {
+      font-size: 18px;
+    }
+    @media #{$smTablet} {
+      margin-bottom: 20px;
+    }
   }
 
   .itemControls2 {
@@ -948,6 +986,11 @@ body {
     gap: 20px;
     @media #{$smalLaptop} {
      gap: 10px;
+      }
+      @media #{$smTablet} {
+        justify-content: space-between;
+        margin-bottom: 20px;
+        width: 100%;
       }
     .quanty_products {
       display: flex;
@@ -988,7 +1031,9 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    /* 33.6px */
+    @media #{$smTablet} {
+      font-size: 17px;
+    }
   }
 
   .oldPrice {
@@ -1023,6 +1068,13 @@ body {
   width: 360px;
   height: fit-content;
   padding-top: 60px;
+  @media (max-width:1024px) {
+    width: 100%;
+  }
+  @media #{$smTablet} {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
 }
 
 .orderSummary {
@@ -1030,7 +1082,7 @@ body {
   border: 1px solid #EEE;
   background: #FFF;
   padding: 25px 20px;
-
+ 
   .summaryTitle {
     color: #292929;
     font-family: "SF Pro Display";
@@ -1067,15 +1119,18 @@ body {
     align-items: center;
 
     &::after {
-      content: url(../images/dotted.png);
+      content: '';
+      // content: url(../images/dotted.png);
       display: block;
       position: absolute;
-      top: 20px;
-      left: 0;
-      right: 0;
+      top: auto;
+      left: 0 !important;
+      bottom: 30px;
+      width: 100%;
       margin: auto;
       display: flex;
       justify-content: center;
+      border-bottom: 1px dotted #888;
     }
 
     .text {
@@ -1085,21 +1140,33 @@ body {
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      background:#fff;
+      z-index: 2;
+      position: relative;
+      padding-right: 5px;
     }
 
     .number {
       color: var(--black, #292929);
-      font-family: Gilroy;
+      font-family: 'Gilroy';
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      position:relative;
+      z-index: 22;
+      padding-left: 5px;
+      background: #fff;
+      
     }
   }
 
   .totalPrice {
     font-weight: 400;
     font-size: 24px;
+    z-index: 22;
+      padding-left: 5px;
+      background: #fff;
   }
 
   .checkoutBtn {
@@ -1530,6 +1597,7 @@ body {
   &.show {
     display: flex;
     opacity: 1;
+    z-index: 9999999;
 
     .checkoutWrapper {
       transform: translateY(0);
