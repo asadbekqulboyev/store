@@ -20,6 +20,12 @@
   @media #{$smalLaptop} {
     max-width: 960px;
   }
+  @media #{$tablet} {
+    max-width: 768px;
+  }
+  @media #{$smTablet} {
+    max-width: 380px;
+  }
 }
 
 body {
@@ -59,7 +65,10 @@ body {
   @media #{$laptop} {
     margin-bottom: 30px;
   }
-
+  @media #{$smTablet} {
+    margin-top: 84px;
+    margin-bottom: 20px;
+  }
   a {
     color: #888;
     font-family: Gilroy;
@@ -108,23 +117,33 @@ body {
     @media #{$laptop} {
       gap: 0 10px;
     }
-
+    @media #{$tablet} {
+      gap:0 5px;
+    }
     &:hover {
       background: #f0f0f0;
     }
 
     span {
-      font-family: Gilroy;
+      font-family: 'Gilroy';
       font-size: 18px;
       font-weight: 400;
 
       @media #{$laptop} {
         font-size: 16px;
       }
+      @media #{$smTablet} {
+       color: #fff;
+     }
     }
 
     svg {
       margin: 0 5px;
+      @media #{$smTablet} {
+       path{
+        fill: #fff;
+       }
+      }
     }
   }
 

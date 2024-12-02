@@ -132,18 +132,37 @@ document.addEventListener("DOMContentLoaded", () => {
   updateButtons();
 
   let popular_products_swiper = new Swiper('.popular_products_swiper', {
-    slidesPerView: 5,
     // freeMode: true,
     spaceBetween: 30,
     loop: true,
     // centeredSlides: true,
     breakpoints: {
+      0:{
+        slidesPerView: 1, 
+      },
+      320: {
+        slidesPerView: 1.2, 
+        spaceBetween: 20,
+      },
+      556: {
+        slidesPerView: 2, 
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2.5, 
+        spaceBetween: 20,
+      },
+      960: {
+        slidesPerView: 3, 
+        spaceBetween: 20,
+      },
       1140: {
         slidesPerView: 4, 
         spaceBetween: 20,
       }
     
-    }
+    },
+    slidesPerView: 5,
     
   });
 
@@ -441,5 +460,23 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('.modal-close-btn').addEventListener('click', () => {
     document.querySelector('.modal#modalCity').classList.remove('show');
 });
+
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const cardInfo = button.nextElementSibling; // Tugmadan keyingi elementni tanlaymiz
+    if (cardInfo.style.display === 'none' || cardInfo.style.display === '') {
+      cardInfo.classList.add('active')
+    }
+    button.style.display = 'none'; // Bosilgan tugmani yashiramiz
+  });
 });
+
+// 
+document.querySelectorAll('.heart').forEach(heart => {
+  heart.addEventListener('click', function() {
+    this.classList.toggle('active'); 
+  });
+});
+});
+
   

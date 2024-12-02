@@ -8,12 +8,27 @@
         flex: 0 0 auto;
         margin: 20px auto;
         font-family: Arial, sans-serif;
+        @media #{$smTablet} {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 0;
+          margin-bottom: 0;
+          &:nth-child(2){
+            margin-top: 
+            10px;
+          }
+        }
+
         
         &-item {
           margin-bottom: 10px;
           border-radius: 15px;
           overflow: hidden;
-          
+          @media #{$smTablet} {
+            margin-bottom: 0px;
+          }
           &.active {
             .accordion-header {
               background: #D22E1C;

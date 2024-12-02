@@ -1,109 +1,160 @@
 .buy {
   margin-bottom: 50px;
-  
-    .row {
-      display: flex;
-      align-items: stretch;
-      transition: all 0.5s ease;
-      flex-wrap: nowrap;
+
+  .row {
+    display: flex;
+    align-items: stretch;
+    transition: all 0.5s ease;
+    flex-wrap: nowrap;
+    // @media #{$smTablet} {
+    //   align-items: flex-start;
+    // }
+  }
+
+  .left_side {
+    width: calc(20.02% - 10.5px);
+    flex: 0 0 auto;
+    border-radius: 20px;
+    background: #898989;
+    transition: all 0.5s ease;
+
+    @media #{$laptop} {
+      width: calc(24.07% - 25.5px);
     }
-  
-    .left_side {
-      width: calc(20.02% - 10.5px);
-      flex: 0 0 auto;
-      border-radius: 20px;
-      background: #898989;
-      transition: all 0.5s ease;
-      @media #{$laptop}{
-        width: calc(24.07% - 25.5px);
-      }
-      &.hidden {
-        display: none; 
-      }
-      img{
-        width: 100%;
-      }
+    @media #{$tablet} {
+      width: calc(30% - 10px);
+      border-radius: 10px;
     }
-  
-    .right_side {
-      width: calc(80.27% - 10.5px);
-      flex: 0 0 auto;
-      padding: 40px 119px 40px 49px;
-      border-radius: 25px;
-      background: #292929;
-      transition: all 0.5s ease; 
-      position: relative;
-      @media #{$laptop}{
-        width: calc(77.05% - 25.5px);
-        padding: 54px 25px 54px 49px;
-      }
-      &.expanded {
-        width: 100%; 
-      }
-  
-      .title {
-        color: #fff;
-        font-family: "SF Pro Display";
-        font-size: 40px;
-        margin-bottom: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 105%;
-        @media #{$laptop}{
-          font-size: 32px;
-          margin-bottom: 10px;
-        }
-      }
-  
-      .description {
-        color: #eee;
-        font-family: Gilroy;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 140%;
+    @media #{$smTablet} {
+      width: calc(35% - 10px);
+    }
+    &.hidden {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+    // @media #{$smTablet} {
+    // display: none;
+    // }
+  }
+
+  .right_side {
+    width: calc(80.27% - 10.5px);
+    flex: 0 0 auto;
+    padding: 40px 119px 40px 49px;
+    border-radius: 25px;
+    background: #292929;
+    transition: all 0.5s ease;
+    position: relative;
+
+    @media #{$laptop} {
+      width: calc(77.05% - 25.5px);
+      padding: 54px 25px 54px 49px;
+    }
+    @media #{$tablet} {
+      padding: 20px;
+      width: calc(70% - 10px);
+    }
+    @media #{$smTablet} {
+      padding: 15px;
+      width: calc(65% - 10px);
+    }
+
+    &.expanded {
+      width: 100%;
+    }
+
+    .title {
+      color: #fff;
+      font-family: "SF Pro Display";
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 105%;
+
+      @media #{$laptop} {
+        font-size: 32px;
         margin-bottom: 10px;
-        @media #{$laptop}{
-          font-size: 16px;
-        }
-  
-        p {
-          margin: 0;
-          transition: opacity 0.5s ease;
-          opacity: 0;
-          display: none;
-  
-          &.visible {
-            opacity: 1;
-            display: block;
-          }
-        }
-  
-        .first.visible {
-          display: block;
-          opacity: 1;
-          span{
-            @media #{$laptop}{
-              display: none;
-            }
-          }
-        }
       }
-  
-      .show {
-        text-decoration: none;
-        color: #888;
-        font-family: Gilroy;
-        font-size: 18px;
+
+      @media #{$smTablet} {
+        color: var(--white, #FFF);
+        font-family: "SF Pro Display";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 105%;
+      }
+    }
+
+    .description {
+      color: #eee;
+      font-family: Gilroy;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      margin-bottom: 10px;
+
+      @media #{$laptop} {
+        font-size: 16px;
+      }
+
+      @media #{$smTablet} {
+        color: var(--dop, #EEE);
+        font-family: 'Gilroy';
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 140%;
-        text-decoration-line: underline;
-        cursor: pointer;
-        @media #{$laptop}{
-          font-size: 16px;
+        line-height: 120%;
+      }
+
+      p {
+        margin: 0;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        display: none;
+
+        &.visible {
+          opacity: 1;
+          display: block;
+        }
+      }
+
+      .first.visible {
+        display: block;
+        opacity: 1;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          span {
+          @media #{$laptop} {
+            display: none;
+          }
         }
       }
     }
+
+    .show {
+      text-decoration: none;
+      color: #888;
+      font-family: Gilroy;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      text-decoration-line: underline;
+      cursor: pointer;
+
+      @media #{$laptop} {
+        font-size: 16px;
+      }
+    }
+  }
 }
-  
