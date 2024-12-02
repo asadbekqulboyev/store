@@ -5,6 +5,9 @@
 
     .dropdown2 {
         margin-bottom: 37px;
+        @media #{$tablet} { 
+            margin-bottom: 0;
+        }
     }
 
     .types {
@@ -16,7 +19,9 @@
         @media #{$laptop} {
             margin-bottom: 94px;
         }
-
+        @media #{$tablet} {
+            margin-bottom: 40px;
+        }
         a {
             text-decoration: none;
             color: #FFF;
@@ -27,12 +32,18 @@
             line-height: normal;
             padding: 10px 15px;
             border-radius: 120px;
-
             @media #{$laptop} {
                 font-size: 16px;
                 font-weight: 600;
             }
-
+            @media #{$tablet} {
+                color: #FFF;
+font-family: 'Gilroy';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+            }
             &.red {
                 background: #D22E1C;
             }
@@ -65,10 +76,11 @@
         font-weight: 400;
         line-height: normal;
         margin-bottom: 18px;
-
+        
         span {
             color: #292929;
         }
+       
     }
 
     .on_off {
@@ -216,26 +228,26 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
-                /* 19.6px */
                 position: relative;
                 z-index: 1;
+                @media #{$tablet} {
+                    background-color: #fff;
+                }
             }
 
             .red {
                 color: #D22E1C;
                 text-align: right;
-                font-family: Gilroy;
+                font-family:'Gilroy';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
-                /* 22.4px */
                 text-decoration-line: underline;
-                text-decoration-style: solid;
-                text-decoration-skip-ink: none;
-                text-decoration-thickness: auto;
-                text-underline-offset: auto;
-                text-underline-position: from-font;
+                @media #{$tablet} {
+                   z-index:121;
+                   background-color: #fff; 
+                }
             }
         }
     }
@@ -266,7 +278,9 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 115%;
-                /* 27.6px */
+                @media #{$tablet} {
+                    display: none;
+                }
             }
 
             .row {
@@ -274,6 +288,9 @@
                 width: 100%;
                 flex-wrap: nowrap;
                 border-top: 1px solid #E3E3E3;
+                @media #{$smalLaptop} {
+                    overflow: hidden;
+                }
             }
         }
 
@@ -283,15 +300,21 @@
             overflow: hidden;
             opacity: 0;
             transition: max-height 0.3s ease, opacity 0.3s ease;
-
+            
             &.active {
                 max-height: none;
                 opacity: 1;
                 padding: 30px 50px 25px 154px;
+                @media #{$smalLaptop} {
+                    padding: 10px;
+                 }
             }
 
             .row {
                 gap: 0 55px;
+                @media #{$smalLaptop} {
+                   flex-direction: column;
+                }
             }
         }
 
@@ -333,8 +356,10 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 115%;
-                /* 40.25px */
                 margin-bottom: 29px;
+                @media #{$laptop} {
+                font-size:20px;
+                }
             }
         }
 
@@ -379,12 +404,21 @@
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
-            /* 49px */
+            @media #{$laptop} {
+            font-size:20px;
+            }
+            @media #{$smalLaptop} {
+                font-size:16px;
+                }
         }
     }
 
     .products {
         margin-bottom: 60px;
+        margin-top: 60px;
+        @media #{$tablet} {
+            margin-top: 20px;
+        }
 
         .row {
             align-items: stretch;

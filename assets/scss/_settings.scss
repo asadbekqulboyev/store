@@ -24,7 +24,7 @@
     max-width: 768px;
   }
   @media #{$smTablet} {
-    max-width: 380px;
+    max-width:100%;
   }
 }
 
@@ -133,17 +133,17 @@ body {
         font-size: 16px;
       }
       @media #{$smTablet} {
-       color: #fff;
+      //  color: #fff;
      }
     }
 
     svg {
       margin: 0 5px;
-      @media #{$smTablet} {
-       path{
-        fill: #fff;
-       }
-      }
+      // @media #{$smTablet} {
+      //  path{
+      //   fill: #fff;
+      //  }
+      // }
     }
   }
 
@@ -191,7 +191,7 @@ body {
 .cookie-banner {
   position: fixed;
   bottom: 50px;
-  width: 1530px;
+  max-width: 1530px;
   margin: 0 auto;
   padding: 25px 175px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -201,7 +201,14 @@ body {
   border-radius: 25px;
   background: #D22E1C;
   right: 0;
-
+@media #{$tablet} {
+  display: flex;
+  align-items:center;
+  padding: 25px 20px;
+}
+@media #{$smTablet} {
+  padding: 15px 10px;
+}
   p {
     color: var(--dop, #EEE);
     font-family: Gilroy;
@@ -209,8 +216,15 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    /* 28px */
     margin-bottom: 20px;
+    @media #{$tablet} {
+      text-align: start;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    @media #{$smTablet} {
+      font-size: 14px;
+    }
   }
 
 
@@ -595,7 +609,7 @@ body {
 
     .name {
       color: #888;
-      font-family: Gilroy;
+      font-family: 'Gilroy';
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -931,7 +945,9 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-
+    @media #{$smalLaptop} {
+     gap: 10px;
+      }
     .quanty_products {
       display: flex;
       align-items: center;
@@ -1615,7 +1631,10 @@ body {
   z-index: 12;
   width: fit-content;
   left: 185px;
-
+  @media #{$tablet} {
+    left: 0;
+    width: 100%;
+  }
   &.none {
     display: none !important;
   }
@@ -1625,7 +1644,10 @@ body {
     display: flex;
     align-items: center;
     gap: 0 60px;
-
+    @media #{$tablet} {
+     flex-direction: column;
+     gap: 20px;
+    }
     .text {
       color: var(--dop, #EEE);
       font-family: Gilroy;

@@ -421,8 +421,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function toggleNoneClass() {
     const items = document.querySelectorAll('.types .button:nth-child(n+22)');
+    const itemsmobile = document.querySelectorAll('.types .button:nth-child(n+7)');
     if (window.innerWidth < 1440) {
       items.forEach(item => item.classList.add('none'));
+    }
+    if (window.innerWidth < 768) {
+      itemsmobile.forEach(item => item.classList.add('none'));
     }
   }
   
@@ -453,13 +457,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let cityBtn = document.querySelector('#citey')
+
   let cityModal = document.querySelector('.modal#modalCity')
-  cityBtn.addEventListener('click',()=>{
+  if(cityBtn){
+     cityBtn.addEventListener('click',()=>{
     cityModal.classList.add('show')
   })
-  document.querySelector('.modal-close-btn').addEventListener('click', () => {
+  }
+ let modal_btn = document.querySelector('.modal-close-btn')
+ if(modal_btn){
+  modal_btn.addEventListener('click', () => {
     document.querySelector('.modal#modalCity').classList.remove('show');
-});
+  });
+ }
 
 document.querySelectorAll('.toggle-btn').forEach(button => {
   button.addEventListener('click', () => {
@@ -477,6 +487,12 @@ document.querySelectorAll('.heart').forEach(heart => {
     this.classList.toggle('active'); 
   });
 });
+// mobile menu
+document.querySelector('.menu').addEventListener('click',(e)=>{
+  document.querySelector('.mobile_menu').classList.toggle('active')
+  e.preventDefault()
+
+})
 });
 
   
