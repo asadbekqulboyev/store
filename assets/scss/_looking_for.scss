@@ -2,14 +2,12 @@
     .section_title {
         margin-bottom: 25px;
     }
-
     .dropdown2 {
         margin-bottom: 37px;
         @media #{$tablet} { 
             margin-bottom: 0;
         }
     }
-
     .types {
         display: flex;
         gap: 10px;
@@ -67,7 +65,6 @@ line-height: normal;
 
         }
     }
-
     .searched_products_number {
         color: #888;
         font-family: Gilroy;
@@ -82,7 +79,6 @@ line-height: normal;
         }
        
     }
-
     .on_off {
         display: flex;
         align-items: center;
@@ -132,7 +128,6 @@ line-height: normal;
             /* Yangi pozitsiya */
         }
     }
-
     .pagination-container {
         display: flex;
         align-items: center;
@@ -143,7 +138,6 @@ line-height: normal;
         background: white;
         border-radius: 8px;
     }
-
     .pagination-prev,
     .pagination-next {
         border: none;
@@ -162,12 +156,10 @@ line-height: normal;
             cursor: not-allowed;
         }
     }
-
     .pagination-numbers {
         display: flex;
         gap: 4px;
     }
-
     .pagination-number {
         cursor: pointer;
         color: #888;
@@ -188,10 +180,6 @@ line-height: normal;
             border-bottom: 1px solid #D22E1C;
         }
     }
-
-
-
-
     .characteristics {
         width: 100%;
 
@@ -251,20 +239,17 @@ line-height: normal;
             }
         }
     }
-
     .cartItems {
         .cartItem {
             display: flex;
             flex-direction: column;
         }
-
         .top {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
         }
-
         .bottom {
             align-items: center;
             gap: 0 55px;
@@ -293,7 +278,6 @@ line-height: normal;
                 }
             }
         }
-
         .character {
             padding: 0;
             max-height: 0;
@@ -317,7 +301,6 @@ line-height: normal;
                 }
             }
         }
-
         .about {
             padding: 0;
             max-height: 0;
@@ -406,7 +389,6 @@ line-height: normal;
                 }
         }
     }
-
     .products {
         margin-bottom: 60px;
         margin-top: 60px;
@@ -619,7 +601,6 @@ line-height: normal;
                 max-height: 4.5em;
                 text-align: center;
             }
-
             .toggle-btn {
                 background: none;
                 border: none;

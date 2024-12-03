@@ -453,13 +453,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let cityBtn = document.querySelector('#citey')
+  let cityBtn2 = document.querySelector('#citey2')
 
   let cityModal = document.querySelector('.modal#modalCity')
   if(cityBtn){
      cityBtn.addEventListener('click',()=>{
     cityModal.classList.add('show')
   })
+  cityBtn2.addEventListener('click',()=>{
+    cityModal.classList.add('show')
+  })
   }
+
  let modal_btn = document.querySelector('.modal-close-btn')
  if(modal_btn){
   modal_btn.addEventListener('click', () => {

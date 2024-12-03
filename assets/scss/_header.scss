@@ -437,7 +437,7 @@
         li {
             list-style: none;
 
-            a {
+            a,div {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
