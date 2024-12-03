@@ -292,9 +292,11 @@ body {
       @media #{$smalLaptop} {
        width: 65%;
        flex: auto;
+
       }
       @media #{$tablet} {
         width: 100%;
+       padding-bottom: 90px;
       }
     }
     .char-row{
@@ -320,6 +322,30 @@ body {
       justify-content: space-between;
       @media #{$smalLaptop} {
         gap: 0;
+      }
+      @media #{$smTablet} {
+        flex-wrap: wrap;
+      }
+    }
+    .basket{
+      @media #{$tablet} {
+        width: fit-content;
+      }
+    }
+    .inner_left{
+      @media #{$smTablet} {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .inner_right{
+      @media #{$smTablet} {
+        width: 100%;
+        justify-content: center;
+        margin-top: 25px;
       }
     }
     .price{
