@@ -509,5 +509,14 @@ $(document).ready(function() {
     $(this).next().next().slideToggle()
     
   })
+  $('.caracter_open').click(function(){
+    $("#modal_image").addClass('show')
+  })
+  $('.close-btn').click(function(){
+    $("#modal_image").removeClass('show')
+  })
+  $('.back-btn').click(function(){
+    $("#modal_image").removeClass('show')
+  })
 });
   

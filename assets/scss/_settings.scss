@@ -2180,7 +2180,9 @@ body {
   z-index: 12;
   width: fit-content;
   left: 185px;
-
+  @media #{$desctop} {
+    left: 10px;
+  }
   @media #{$tablet} {
     left: 0;
     width: 100%;

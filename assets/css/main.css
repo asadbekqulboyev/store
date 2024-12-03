@@ -2037,6 +2037,11 @@ body {
   width: fit-content;
   left: 185px;
 }
+@media (max-width: 1530px) {
+  .notifiaction {
+    left: 10px;
+  }
+}
 @media (max-width: 960px) {
   .notifiaction {
     left: 0;
