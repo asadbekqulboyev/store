@@ -466,6 +466,9 @@
     transition: all .2s linear;
     .container{
         padding: 0;
+        @media #{$smTablet} {
+            padding-bottom: 20px;
+        }
     }
     .catalog_header{
         color: #FFF;
@@ -495,6 +498,15 @@
         flex-direction: column;
         .parent_link{
             background: #F24D3B;
+
+            img{
+                transform: rotate(-90deg);
+            }
+            &.active{
+                img{
+                    transform: rotate(0deg);
+                }
+            }
         }
         .parent_link,.chil_link{
             display:flex;
@@ -509,23 +521,32 @@
             justify-content: space-between;
             text-decoration: none;
             padding: 11px;
+            
         }
         .child_list{
             border-top: 1px solid #F24D3B;
             border-bottom: 1px solid #F24D3B;
-            background: #B03324;
+            background: #D73A28;
             // display: none;
             &.active{
                 display: flex;
             }
         }
         .chil_link{
+            &:hover{
+                background: #F24D3B;
+            }
+            a{
+                &:hover{
+                    background: #F24D3B;
+                }
+            }
             img{
                 transition: all .3s linear;
             }
             &.active{
                 img{
-                    transform: rotate(45deg);
+                    transform: rotate(-90deg);
                 }
             }
         }

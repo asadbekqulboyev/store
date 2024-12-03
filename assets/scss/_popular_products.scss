@@ -1,5 +1,10 @@
 .popular_products{
     margin-bottom: 100px;
+    &.popular_catalog{
+        @media #{$smTablet} {
+            display: none;
+        }
+    }
     .section_title{
         margin-bottom: 50px;
     }
@@ -190,4 +195,5 @@
         }
           
     }
+   
 }
