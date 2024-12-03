@@ -46,6 +46,16 @@
                 height: 128px;
                 font-size: 16px;
             }
+            &.corner4{
+                @media #{$tablet} {
+                    width: 100%;
+                    height: 70px;
+                    font-size: 16px;
+                    span{
+                        display:none;
+                    }
+                } 
+            }
             &:hover{
                 background: #D22E1C;
                 .text{

@@ -37,6 +37,9 @@
             @media #{$laptop}{
                 gap: 0 14px;
             }
+            @media #{$tablet} {
+              justify-content: space-between;
+            }
         }
         .price{
             color: #292929;
@@ -103,12 +106,14 @@
             .result {
                 margin: 0 13px;
                 color: #0C0C0E;
-                font-family: Gilroy;
+                font-family: 'Gilroy';
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
-                
+                @media #{$smTablet} {
+                    font-size: 14px;
+                }
             }
         }
         .basket{
@@ -120,6 +125,15 @@
             border-radius: 62px;
             background: #D22E1C;
             text-decoration: none;
+            @media #{$smTablet} {
+                width: 100%;
+               max-width: 190px;
+               font-size: 16px;
+            }
+
+            @media (max-width:380px) {
+               max-width: 150px;
+            }
             .text{
                 color: #FFF;
                 font-family: Gilroy;
@@ -148,6 +162,9 @@
                 width: 240px;
                 height: fit-content;
                 padding-bottom: 30px;
+            }
+            @media #{$tablet} {
+                width: 100%;
             }
         }
           

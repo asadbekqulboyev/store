@@ -529,7 +529,14 @@ line-height: normal;
                     }
                 }
             }
-
+        
+            .price_action{
+                display: none;
+                @media #{$smTablet} {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
             .buttons {
                 display: flex;
                 align-items: center;
@@ -556,9 +563,12 @@ line-height: normal;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
-                /* 49px */
                 text-align: center;
-
+                &.mobele_hidden{
+                    @media #{$smTablet} {
+                        display: none; 
+                    }
+                }
                 @media #{$laptop} {
                     font-size: 24px;
                 }
@@ -571,10 +581,14 @@ line-height: normal;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
-                /* 22.4px */
                 text-decoration-line: line-through;
                 text-align: center;
-
+                &.mobele_hidden{
+                    
+                    @media #{$smTablet} {
+                        display: none; 
+                    }
+                }
             }
 
 
@@ -595,8 +609,6 @@ line-height: normal;
             .text-container {
                 position: relative;
                 width: 300px;
-                // height: 120px;
-
                 @media #{$laptop} {
                     width: 240px;
                     height: fit-content;

@@ -140,12 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
       0:{
         slidesPerView: 1, 
       },
-      320: {
-        slidesPerView: 1.2, 
-        spaceBetween: 20,
-      },
       556: {
-        slidesPerView: 2, 
+        slidesPerView: 1.5, 
         spaceBetween: 20,
       },
       768: {
@@ -503,6 +499,10 @@ $(document).ready(function() {
   $('.chil_link').click(function(){
     $(this).next(".chil_link_list").slideToggle()
     $(this).toggleClass('active')
+  })
+  $('.btn_open').click(function(){
+    $(this).next().next().slideToggle()
+    
   })
 });
   
