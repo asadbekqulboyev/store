@@ -281,6 +281,64 @@ body {
   transition: opacity 0.3s;
   z-index: 4;
 
+  &#modal_image {
+    overflow-y: auto;
+    .product-container{
+      @media #{$tablet} {
+        flex-direction: column;
+      }
+    }
+    .product-info{
+      @media #{$smalLaptop} {
+       width: 65%;
+       flex: auto;
+      }
+      @media #{$tablet} {
+        width: 100%;
+      }
+    }
+    .char-row{
+      align-items: center;
+      overflow: hidden;
+      .name{
+        background: #fff;
+        z-index: 2;
+        padding-right: 5px;
+      }
+      .red{
+        background: #fff;
+        z-index: 2;
+        padding-left: 5px;
+      }
+    }
+    .fav-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .price-section{
+      justify-content: space-between;
+      @media #{$smalLaptop} {
+        gap: 0;
+      }
+    }
+    .price{
+      @media #{$smalLaptop} {
+        font-size: 16px;
+      }
+    }
+    .old_price{
+      @media #{$smalLaptop} {
+        font-size: 14px;
+      }
+    }
+    .modal_title{
+      @media #{$smalLaptop} {
+        font-size: 28px;
+      }
+    }
+  }
+
   &.show {
     display: flex;
     opacity: 1;
@@ -400,6 +458,10 @@ body {
       max-width: 850px;
       height: calc(100vh - 90px);
       overflow-y: auto;
+
+      @media #{$smTablet} {
+        padding: 25px;
+      }
 
     }
 
@@ -832,6 +894,7 @@ body {
   .minus,
   .plus {
     cursor: pointer;
+
     @media #{$tablet} {
       width: 15px;
     }
@@ -878,6 +941,16 @@ body {
 
     .cartContent {
       transform: translateY(0);
+    }
+  }
+  .cartItem{
+    .itemImage{
+      @media #{$smTablet} {
+       width: 100%;
+      }
+    }
+    @media #{$smTablet} {
+      flex-direction: column;
     }
   }
 }
@@ -1001,9 +1074,9 @@ body {
   gap: 0 20px;
 
   @media #{$smTablet} {
-   align-items: flex-start;
-   gap: 0 10px;
-   padding-left: 8px;
+    align-items: flex-start;
+    gap: 0 10px;
+    padding-left: 8px;
   }
 
   .price_bottom.mobile {
@@ -1012,6 +1085,7 @@ body {
     @media #{$smTablet} {
       display: flex;
       margin-top: 15px;
+
       .prices {
         flex-direction: row;
         gap: 10px;
@@ -1021,12 +1095,15 @@ body {
 
   .itemImage {
     overflow: hidden;
+
     @media #{$tablet} {
       width: 120px;
       flex: 0 0 auto;
     }
+
     img {
       width: 100%;
+
       @media #{$smTablet} {
         object-fit: contain;
       }
@@ -1049,9 +1126,11 @@ body {
     @media #{$laptop} {
       font-size: 18px;
     }
+
     @media #{$tablet} {
       margin-bottom: 0;
     }
+
     @media #{$smTablet} {
       margin-bottom: 0px;
       font-size: 16px;
@@ -1082,6 +1161,7 @@ body {
 
     ul {
       margin-top: 15px;
+
       li {
         list-style: none;
 
@@ -1175,6 +1255,12 @@ body {
       }
     }
 
+    &.modal_pr_none {
+      @media #{$smTablet} {
+        display: none;
+      }
+    }
+
     &.mobile {
       @media #{$smTablet} {
         display: flex;
@@ -1204,6 +1290,7 @@ body {
     font-weight: 400;
     line-height: 140%;
     text-decoration-line: line-through;
+
     @media #{$smTablet} {
       font-weight: 300;
     }
@@ -1223,14 +1310,17 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
     @media #{$smTablet} {
       font-size: 14px;
       padding: 10px;
       gap: 10px;
-      svg{
+
+      svg {
         width: 15px;
       }
     }
+
     &.mobile_none {
       @media #{$smTablet} {
         display: none;
@@ -1384,8 +1474,17 @@ body {
     display: flex;
     opacity: 1;
 
+    @media #{$smTablet} {
+      z-index: 989898;
+
+    }
+
     .cartContainer {
       transform: translateY(0);
+
+      @media #{$smTablet} {
+        padding: 25px;
+      }
     }
   }
 }
@@ -1442,11 +1541,70 @@ body {
   font-weight: 400;
   line-height: 105%;
   margin-bottom: 26px;
+
+  @media #{$smTablet} {
+    font-size: 34px;
+  }
+  @media #{$mobile} {
+    font-size: 24px;
+  }
 }
 
 .cartMainSection {
   display: flex;
   gap: 30px;
+
+  .cartItem {
+    @media #{$smTablet} {
+      border-radius: 20px;
+    }
+
+    .itemImage {
+      @media (max-width:420px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width:420px) {
+      flex-direction: column;
+    }
+  }
+
+  .itemControls {
+    @media #{$smTablet} {
+      display: none;
+    }
+
+  }
+
+  @media (max-width:1024px) {
+    flex-direction: column;
+  }
+
+  .price_item {
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px dotted #888;
+      position: absolute;
+      bottom: 6px;
+    }
+
+    .text {
+      background: #fff;
+      position: relative;
+      z-index: 2;
+      padding-right: 5px;
+    }
+
+    .number {
+      padding-left: 5px;
+      background: #fff;
+      position: relative;
+      z-index: 2;
+    }
+  }
 }
 
 .cartLeftSection {
@@ -1458,7 +1616,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  @media #{$smTablet} {
+    flex-direction: column;
+    align-items: start;
+  }
   .number_text {
     color: var(--black, #292929);
     font-family: Gilroy;
@@ -1477,6 +1638,10 @@ body {
   font-weight: 500;
   line-height: 115%;
   margin-bottom: 20px;
+  @media #{$smTablet} {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
 }
 
 .clearCartAction {
@@ -1551,6 +1716,16 @@ body {
   border: 1px solid #EEE;
   background: #FFF;
 
+  @media (max-width:1024px) {
+    width: 100%;
+  }
+
+  @media #{$smTablet} {
+    margin-top: 0;
+    padding: 0;
+    border: 0;
+  }
+
   .modal_title {
     color: #292929;
     font-family: "SF Pro Display";
@@ -1622,7 +1797,15 @@ body {
           }
         }
       }
+
+      @media #{$smTablet} {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        gap: 10px;
+      }
     }
+
   }
 
   .price_item {
@@ -1632,16 +1815,16 @@ body {
     position: relative;
     margin-bottom: 34px;
 
-    &::after {
-      content: url(../images/dotted2.png);
-      display: block;
-      position: absolute;
-      top: 6px;
-      left: -65px;
-      right: 0;
-      display: flex;
-      justify-content: center;
-    }
+    // &::after {
+    //   content: url(../images/dotted2.png);
+    //   display: block;
+    //   position: absolute;
+    //   top: 6px;
+    //   left: -65px;
+    //   right: 0;
+    //   display: flex;
+    //   justify-content: center;
+    // }
 
     .text {
       color: #888;
@@ -1792,15 +1975,80 @@ body {
     max-height: calc(100vh - 60px);
     overflow-y: auto;
     height: fit-content;
-    .delete_item{
+
+    @media #{$smTablet} {
+      padding: 25px;
+    }
+
+    .delete_item {
       @media #{$smTablet} {
         display: none;
       }
     }
-    .basket{
+
+    .basket {
       @media #{$smTablet} {
         max-width: fit-content;
       }
+    }
+
+    .cartItem {
+      position: relative;
+
+      @media #{$smTablet} {
+        border-radius: 20px;
+        gap: 0 5px;
+        padding-right: 10px;
+      }
+
+      @media (max-width:390px) {
+        flex-direction: column;
+      }
+
+      .itemControls {
+        margin-top: 25px;
+
+        @media #{$smTablet} {
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    .icon {
+      @media #{$smTablet} {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+
+      .heart {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #D22E1C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.active {
+          background-color: #ccc;
+
+          path {
+            fill: #D22E1C;
+          }
+        }
+      }
+    }
+
+    .itemImage {
+      @media (max-width:420px) {
+        width: 80px;
+      }
+
+      @media (max-width:390px) {
+        width: 100%;
+      }
+
     }
   }
 

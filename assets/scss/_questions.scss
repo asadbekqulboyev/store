@@ -50,6 +50,9 @@
           @media #{$laptop} {
             padding: 18px 20px 18px 20px;
           }
+          @media #{$smTablet} {
+            padding: 18px 19px;
+          }
 
           .text {
             color: #fff;

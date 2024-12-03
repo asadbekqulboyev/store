@@ -32,7 +32,14 @@
             justify-content: center;
             position: relative;
             transition: .3s all ease;
-
+            &.laptop_none{
+                @media #{$laptop}{
+                display: none;}
+            }
+            &.tablet_none{
+                @media #{$tablet}{
+                display: none;}
+            }
             @media #{$laptop}{
                 width: 16.666%;
                 height: 164px;
