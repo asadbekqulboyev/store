@@ -283,6 +283,7 @@ body {
 
   &#modal_image {
     overflow-y: auto;
+    z-index: 980989879;
     .product-container{
       @media #{$tablet} {
         flex-direction: column;
@@ -317,6 +318,9 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media #{$mobile}{
+        display: none;
+      }
     }
     .price-section{
       justify-content: space-between;
@@ -344,7 +348,7 @@ body {
     .inner_right{
       @media #{$smTablet} {
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 25px;
       }
     }
@@ -361,6 +365,21 @@ body {
     .modal_title{
       @media #{$smalLaptop} {
         font-size: 28px;
+      }
+      @media #{$smTablet} {
+        font-size: 22px;
+      }
+    }
+    .description_title{
+      @media #{$smTablet} {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+    .description{
+      @media #{$smTablet} {
+        font-size: 16px;
+        margin-bottom: 20px;
       }
     }
   }

@@ -345,9 +345,6 @@ line-height: normal;
                 gap: 0 43px;
             }
         }
-
-
-
         .itemInfo {
             .product_name {
                 color: #292929;
@@ -362,7 +359,6 @@ line-height: normal;
                 }
             }
         }
-
         .like {
             padding: 10px;
             border-radius: 120px;
@@ -372,7 +368,6 @@ line-height: normal;
             border: none;
             cursor: pointer;
         }
-
         .actions {
             display: flex;
             align-items: center;
@@ -395,7 +390,6 @@ line-height: normal;
                 }
             }
         }
-
         .new_price {
             color: #292929;
             text-align: right;
@@ -419,7 +413,6 @@ line-height: normal;
         @media #{$tablet} {
             margin-top: 20px;
         }
-
         .row {
             align-items: stretch;
             gap: 30px 0;
@@ -429,7 +422,6 @@ line-height: normal;
 
             }
         }
-
         .item {
             width: calc(25% - 15px);
             flex: 0 0 auto;
@@ -441,15 +433,12 @@ line-height: normal;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
-
             @media #{$laptop} {
                 padding: 25px 15px 15px 15px;
             }
-
             @media #{$smalLaptop} {
                 width: calc(33.33% - 15px);
             }
-
             @media #{$tablet} {
                 width: calc(50% - 10px);
             }
