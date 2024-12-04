@@ -678,7 +678,6 @@
     .btn_mobile {
         border-radius: 114.815px;
         background: #D22E1C;
-        display: flex;
         justify-content: center;
         align-items: center;font-family: 'Gilroy';
         width: fit-content;
@@ -688,5 +687,10 @@
         font-size: 16px;
         font-weight: 600;
         text-decoration: none;
+        display: none;
+        @media #{$smTablet} {
+        display: flex;
+            
+        }
     }
 }

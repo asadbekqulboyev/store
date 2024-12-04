@@ -1129,6 +1129,14 @@ body {
     font-size: 16px;
   }
 }
+.cartItem .info_lists {
+  display: none;
+}
+@media (max-width: 768px) {
+  .cartItem .info_lists {
+    display: block;
+  }
+}
 .cartItem .info_lists .btn_open {
   color: #888;
   font-family: "Gilroy";
@@ -3430,7 +3438,6 @@ body {
 .looking_for .btn_mobile {
   border-radius: 114.815px;
   background: #D22E1C;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Gilroy";
@@ -3441,6 +3448,12 @@ body {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+  display: none;
+}
+@media (max-width: 768px) {
+  .looking_for .btn_mobile {
+    display: flex;
+  }
 }
 
 .catalog .cartItem {
@@ -3517,7 +3530,6 @@ body {
     display: none;
   }
 }
-
 .popular_products {
   margin-bottom: 100px;
 }
