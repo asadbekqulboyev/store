@@ -6,9 +6,6 @@
     align-items: stretch;
     transition: all 0.5s ease;
     flex-wrap: nowrap;
-    // @media #{$smTablet} {
-    //   align-items: flex-start;
-    // }
   }
 
   .left_side {
@@ -36,9 +33,6 @@
       width: 100%;
       object-fit: contain;
     }
-    // @media #{$smTablet} {
-    // display: none;
-    // }
   }
 
   .right_side {
@@ -126,13 +120,15 @@
       }
 
       .first.visible {
-        display: block;
         opacity: 1;
+        display: block;
+          @media #{$mobile} {
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
+          }
           span {
           @media #{$laptop} {
             display: none;

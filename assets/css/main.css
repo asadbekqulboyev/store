@@ -1418,6 +1418,22 @@ body {
   line-height: normal;
 }
 
+.on_off {
+  background: #fff;
+}
+
+.btn_svg.active {
+  border: 1px solid #EEE;
+  background: #D53C2B;
+  border-radius: 50%;
+}
+.btn_svg.active svg path {
+  stroke: #FFF;
+}
+.btn_svg svg path {
+  stroke: #888888;
+}
+
 .modalCart {
   display: none;
   position: fixed;
@@ -2782,13 +2798,17 @@ body {
   display: block;
 }
 .buy .right_side .description .first.visible {
-  display: block;
   opacity: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block;
+}
+@media (max-width: 380px) {
+  .buy .right_side .description .first.visible {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 @media (max-width: 1440px) {
   .buy .right_side .description .first.visible span {

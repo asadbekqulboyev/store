@@ -56,9 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
     this.style.display = 'none';
   });
 
-  document.querySelector('.on_off').addEventListener('click', function () {
-    this.classList.toggle('active');
-  });
+  // document.querySelector('.on_off').addEventListener('click', function () {
+  //   this.classList.toggle('active');
+  // });
+  $('.btn_svg').click(function(){
+    $('.btn_svg').removeClass('active')
+    $(this).addClass('active')
+  })
   
 
   const minusButton = document.querySelector('.minus');
